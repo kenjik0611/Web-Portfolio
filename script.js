@@ -51,8 +51,11 @@ document.querySelectorAll('.skill-card').forEach((card, i) => {
 });
 
 /* ===== CONTACT FORM ===== */
+// バックエンド(SESメーラー)のエンドポイント。nginxで /api をNodeに転送する想定。
+const CONTACT_ENDPOINT = '/api/contact';
+
 const form = document.getElementById('contactForm');
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
 
   const btn = form.querySelector('button[type="submit"]');
@@ -60,16 +63,39 @@ form.addEventListener('submit', e => {
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
 
-  // ここに実際の送信処理（FormspreeやNetlify Formsなど）を追加してください
-  setTimeout(() => {
+  const showMessage = (text, color) => {
+    let msg = form.querySelector('.form-result');
+    if (!msg) {
+      msg = document.createElement('p');
+      msg.className = 'form-result';
+      msg.style.cssText = 'text-align:center;margin-top:16px;font-size:0.9rem;';
+      form.appendChild(msg);
+    }
+    msg.style.color = color;
+    msg.textContent = text;
+    return msg;
+  };
+
+  try {
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    const res = await fetch(CONTACT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json().catch(() => ({}));
+
+    if (!res.ok || !result.ok) {
+      throw new Error(result.error || '送信に失敗しました。');
+    }
+
     btn.innerHTML = '<i class="fas fa-circle-check"></i> 送信完了！';
     btn.style.background = 'linear-gradient(135deg, #00d4aa, #0099cc)';
-
-    const msg = document.createElement('p');
-    msg.style.cssText = 'text-align:center;color:#00d4aa;margin-top:16px;font-size:0.9rem;';
-    msg.textContent = 'お問い合わせありがとうございます。2営業日以内にご返信いたします。';
-    form.appendChild(msg);
-
+    const msg = showMessage(
+      'お問い合わせありがとうございます。2営業日以内にご返信いたします。',
+      '#00d4aa'
+    );
     form.reset();
 
     setTimeout(() => {
@@ -78,7 +104,11 @@ form.addEventListener('submit', e => {
       btn.style.background = '';
       msg.remove();
     }, 5000);
-  }, 1200);
+  } catch (err) {
+    showMessage(err.message || '送信に失敗しました。時間をおいて再度お試しください。', '#ff6b6b');
+    btn.disabled = false;
+    btn.innerHTML = orig;
+  }
 });
 
 /* ===== ACTIVE NAV HIGHLIGHT ON SCROLL ===== */
