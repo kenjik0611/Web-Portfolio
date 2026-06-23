@@ -1,0 +1,23 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main # mainブランチにプッシュされたときに実行（環境に合わせて変更してください）
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2 via SSH/rsync
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets::EC2_HOST }}
+          username: ${{ secrets::EC2_USER }}
+          key: ${{ secrets::EC2_SSH_KEY }}
+          source: "." # 送信する対象（フォルダ丸ごと）
+          target: "/var/www/html" # EC2側のデプロイ先ディレクトリ（環境に合わせて変更）
