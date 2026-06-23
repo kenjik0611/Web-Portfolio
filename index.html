@@ -1,400 +1,516 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Your Name - Web Creator</title>
-  <meta name="description" content="フリーランスWebクリエイターのポートフォリオです。コーポレートサイト・LP・WordPressサイトの制作を承ります。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- ========== NAVIGATION ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Portfolio</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- ========== HERO ========== -->
-  <section id="hero" class="hero">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Web Creator &amp; Designer</p>
-      <h1 class="hero-title">
-        <span>想いを、</span><br>
-        <span class="grad-text">かたちに。</span>
-      </h1>
-      <p class="hero-desc">
-        ビジネスの目的に合わせた、使いやすく美しいウェブサイトを制作します。<br>
-        ヒアリングから公開・サポートまで、一人で丁寧に対応します。
-      </p>
-      <div class="hero-btns">
-        <a href="#works" class="btn btn-primary">実績を見る</a>
-        <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Your Name - Web Creator</title>
+    <meta
+      name="description"
+      content="フリーランスWebクリエイターのポートフォリオです。コーポレートサイト・LP・WordPressサイトの制作を承ります。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Portfolio</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-bar"></div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- ========== SKILLS ========== -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-label">Skills</p>
-        <h2 class="sec-title">できること</h2>
-        <p class="sec-desc">最新のWeb技術を活用し、目的に合わせた最適なサイトを制作します。</p>
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
       </div>
-
-      <div class="skills-grid">
-        <div class="skill-card" data-fade>
-          <div class="skill-icon purple"><i class="fab fa-html5"></i></div>
-          <h3>HTML / CSS</h3>
-          <p>セマンティックなマークアップとモダンなCSS設計でアクセシブルなコーディングを行います。</p>
-          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-        </div>
-        <div class="skill-card" data-fade>
-          <div class="skill-icon yellow"><i class="fab fa-js"></i></div>
-          <h3>JavaScript</h3>
-          <p>インタラクティブなUIやアニメーションを実装し、ユーザー体験を向上させます。</p>
-          <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
-        </div>
-        <div class="skill-card" data-fade>
-          <div class="skill-icon blue"><i class="fab fa-wordpress"></i></div>
-          <h3>WordPress</h3>
-          <p>オリジナルテーマ制作からプラグイン設定まで、運用しやすいサイトを構築します。</p>
-          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
-        </div>
-        <div class="skill-card" data-fade>
-          <div class="skill-icon teal"><i class="fas fa-mobile-screen"></i></div>
-          <h3>レスポンシブ対応</h3>
-          <p>スマホ・タブレット・PCなど、あらゆる端末で美しく表示されるデザインを実現します。</p>
-          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
-        </div>
-        <div class="skill-card" data-fade>
-          <div class="skill-icon orange"><i class="fas fa-magnifying-glass"></i></div>
-          <h3>SEO対策</h3>
-          <p>検索エンジンに評価されやすい構造・コーディング・メタ情報の最適化に対応します。</p>
-          <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
-        </div>
-        <div class="skill-card" data-fade>
-          <div class="skill-icon pink"><i class="fab fa-figma"></i></div>
-          <h3>UI / Webデザイン</h3>
-          <p>Figmaを使ったデザインカンプ作成から実装まで一貫して対応します。</p>
-          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Web Creator &amp; Designer</p>
+        <h1 class="hero-title">
+          <span>kiyoken</span><br />
+          <span class="grad-text">Web制作</span>
+        </h1>
+        <p class="hero-desc">
+          ビジネスの目的に合わせた、使いやすく美しいウェブサイトを制作します。<br />
+          ヒアリングから公開・サポートまで、一人で丁寧に対応します。
+        </p>
+        <div class="hero-btns">
+          <a href="#works" class="btn btn-primary">実績を見る</a>
+          <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ========== WORKS ========== -->
-  <section id="works" class="section works-section">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-label">Works</p>
-        <h2 class="sec-title">制作実績</h2>
-        <p class="sec-desc">これまでに制作したサイトの一部をご紹介します。</p>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-bar"></div>
       </div>
+    </section>
 
-      <div class="works-notice" data-fade>
-        <i class="fas fa-circle-info"></i>
-        <p>現在ポートフォリオ準備中のため、以下はサンプル制作物です。実績が増え次第、順次更新いたします。</p>
-      </div>
-
-      <div class="works-grid">
-        <article class="work-card" data-fade>
-          <div class="work-thumb thumb-1">
-            <span class="work-badge">サンプル制作</span>
-            <div class="work-overlay">
-              <a href="#" class="work-link-btn">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-tags">
-              <span>コーポレートサイト</span>
-              <span>WordPress</span>
-              <span>HTML/CSS</span>
-            </div>
-            <h3>〇〇株式会社 コーポレートサイト</h3>
-            <p>清潔感のあるデザインで信頼性を高めた企業サイト。採用ページとブログ機能も実装。</p>
-          </div>
-        </article>
-
-        <article class="work-card" data-fade>
-          <div class="work-thumb thumb-2">
-            <span class="work-badge">サンプル制作</span>
-            <div class="work-overlay">
-              <a href="#" class="work-link-btn">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-tags">
-              <span>ランディングページ</span>
-              <span>HTML/CSS</span>
-              <span>JavaScript</span>
-            </div>
-            <h3>美容サロン ランディングページ</h3>
-            <p>コンバージョン重視のLP。スクロールアニメーションと予約フォームを実装。</p>
-          </div>
-        </article>
-
-        <article class="work-card" data-fade>
-          <div class="work-thumb thumb-3">
-            <span class="work-badge">個人制作</span>
-            <div class="work-overlay">
-              <a href="#" class="work-link-btn">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-tags">
-              <span>ポートフォリオ</span>
-              <span>HTML/CSS</span>
-              <span>JavaScript</span>
-            </div>
-            <h3>クリエイター ポートフォリオサイト</h3>
-            <p>イラストレーターの作品を魅力的に見せるギャラリーサイト。フィルター機能付き。</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SERVICE & PRICE ========== -->
-  <section id="service" class="section">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-label">Service &amp; Price</p>
-        <h2 class="sec-title">サービスと料金</h2>
-        <p class="sec-desc">ご要望・予算に合わせた柔軟なプランをご提案します。料金はあくまで目安です。お気軽にご相談ください。</p>
-      </div>
-
-      <div class="price-grid">
-        <!-- Light -->
-        <div class="price-card" data-fade>
-          <div class="price-head">
-            <p class="plan-name">ライト</p>
-            <div class="price-num">
-              <span class="yen">¥</span><span class="amount">50,000</span><span class="from">〜</span>
-            </div>
-            <p class="plan-type">ランディングページ</p>
-          </div>
-          <ul class="price-list">
-            <li class="ok"><i class="fas fa-check"></i> 1ページ構成のLP</li>
-            <li class="ok"><i class="fas fa-check"></i> レスポンシブ対応</li>
-            <li class="ok"><i class="fas fa-check"></i> お問い合わせフォーム</li>
-            <li class="ok"><i class="fas fa-check"></i> 基本SEO設定</li>
-            <li class="ok"><i class="fas fa-check"></i> 納品後1ヶ月サポート</li>
-            <li class="no"><i class="fas fa-xmark"></i> CMS導入</li>
-            <li class="no"><i class="fas fa-xmark"></i> 複数ページ対応</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline w-full">相談する</a>
-        </div>
-
-        <!-- Standard (featured) -->
-        <div class="price-card featured" data-fade>
-          <div class="popular-badge">人気</div>
-          <div class="price-head">
-            <p class="plan-name">スタンダード</p>
-            <div class="price-num">
-              <span class="yen">¥</span><span class="amount">150,000</span><span class="from">〜</span>
-            </div>
-            <p class="plan-type">コーポレートサイト</p>
-          </div>
-          <ul class="price-list">
-            <li class="ok"><i class="fas fa-check"></i> 5〜8ページ構成</li>
-            <li class="ok"><i class="fas fa-check"></i> レスポンシブ対応</li>
-            <li class="ok"><i class="fas fa-check"></i> お問い合わせフォーム</li>
-            <li class="ok"><i class="fas fa-check"></i> SEO・Googleアナリティクス</li>
-            <li class="ok"><i class="fas fa-check"></i> WordPress導入</li>
-            <li class="ok"><i class="fas fa-check"></i> ブログ・お知らせ機能</li>
-            <li class="ok"><i class="fas fa-check"></i> 納品後3ヶ月サポート</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary w-full">相談する</a>
-        </div>
-
-        <!-- Premium -->
-        <div class="price-card" data-fade>
-          <div class="price-head">
-            <p class="plan-name">プレミアム</p>
-            <div class="price-num">
-              <span class="yen">¥</span><span class="amount">300,000</span><span class="from">〜</span>
-            </div>
-            <p class="plan-type">大規模サイト・EC</p>
-          </div>
-          <ul class="price-list">
-            <li class="ok"><i class="fas fa-check"></i> ページ数無制限</li>
-            <li class="ok"><i class="fas fa-check"></i> レスポンシブ対応</li>
-            <li class="ok"><i class="fas fa-check"></i> EC・予約システム</li>
-            <li class="ok"><i class="fas fa-check"></i> 高度SEO・アクセス解析</li>
-            <li class="ok"><i class="fas fa-check"></i> CMS導入・管理者研修</li>
-            <li class="ok"><i class="fas fa-check"></i> 多言語対応（オプション）</li>
-            <li class="ok"><i class="fas fa-check"></i> 納品後6ヶ月サポート</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline w-full">相談する</a>
-        </div>
-      </div>
-
-      <!-- Flow -->
-      <div class="flow-block" data-fade>
-        <h3 class="flow-title"><i class="fas fa-route"></i> 制作の流れ</h3>
-        <div class="flow-steps">
-          <div class="flow-step">
-            <div class="step-num">01</div>
-            <h4>ヒアリング</h4>
-            <p>ご要望・目的・予算をオンラインでお伺いします。</p>
-          </div>
-          <i class="fas fa-chevron-right flow-arrow"></i>
-          <div class="flow-step">
-            <div class="step-num">02</div>
-            <h4>お見積り</h4>
-            <p>内容をもとにお見積りをご提示し、ご了承後に契約です。</p>
-          </div>
-          <i class="fas fa-chevron-right flow-arrow"></i>
-          <div class="flow-step">
-            <div class="step-num">03</div>
-            <h4>デザイン・制作</h4>
-            <p>デザイン案をご確認いただきながら丁寧に制作します。</p>
-          </div>
-          <i class="fas fa-chevron-right flow-arrow"></i>
-          <div class="flow-step">
-            <div class="step-num">04</div>
-            <h4>公開・サポート</h4>
-            <p>最終確認後に公開。アフターサポートも充実しています。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT ========== -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-label">About</p>
-        <h2 class="sec-title">自己紹介</h2>
-      </div>
-      <div class="about-wrap">
-        <div class="about-img-col" data-fade>
-          <div class="avatar-box">
-            <div class="avatar-ring"></div>
-            <div class="avatar-circle">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="avatar-deco deco-1"></div>
-            <div class="avatar-deco deco-2"></div>
-          </div>
-        </div>
-        <div class="about-text-col" data-fade>
-          <h3 class="about-name">Your Name<span class="about-name-ja"> ／ ユア・ネーム</span></h3>
-          <p class="about-role">Web Creator / フリーランス</p>
-          <p class="about-bio">
-            はじめまして。フリーランスのWebクリエイター、[お名前]です。<br><br>
-            「ホームページを持ちたいけど何から始めればいいか分からない」——そんな方のお悩みを解決したい思いからWeb制作を始めました。<br><br>
-            デザインから実装・公開まで一人で対応するため、スピーディで密なコミュニケーションが強みです。お客様のビジネスを育てるパートナーとして、丁寧にサポートします。
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="sec-head">
+          <p class="sec-label">Skills</p>
+          <h2 class="sec-title">できること</h2>
+          <p class="sec-desc">
+            最新のWeb技術を活用し、目的に合わせた最適なサイトを制作します。
           </p>
-          <ul class="about-info">
-            <li><i class="fas fa-location-dot"></i> 東京都 ／ リモート対応可</li>
-            <li><i class="fas fa-envelope"></i> your@email.com</li>
-            <li><i class="fas fa-clock"></i> 平日 9:00〜18:00（土日応相談）</li>
-          </ul>
-          <div class="about-sns">
-            <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-fade>
+            <div class="skill-icon purple"><i class="fab fa-html5"></i></div>
+            <h3>HTML / CSS</h3>
+            <p>
+              セマンティックなマークアップとモダンなCSS設計でアクセシブルなコーディングを行います。
+            </p>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-fade>
+            <div class="skill-icon yellow"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <p>
+              インタラクティブなUIやアニメーションを実装し、ユーザー体験を向上させます。
+            </p>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-fade>
+            <div class="skill-icon blue"><i class="fab fa-wordpress"></i></div>
+            <h3>WordPress</h3>
+            <p>
+              オリジナルテーマ制作からプラグイン設定まで、運用しやすいサイトを構築します。
+            </p>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-fade>
+            <div class="skill-icon teal">
+              <i class="fas fa-mobile-screen"></i>
+            </div>
+            <h3>レスポンシブ対応</h3>
+            <p>
+              スマホ・タブレット・PCなど、あらゆる端末で美しく表示されるデザインを実現します。
+            </p>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-fade>
+            <div class="skill-icon orange">
+              <i class="fas fa-magnifying-glass"></i>
+            </div>
+            <h3>SEO対策</h3>
+            <p>
+              検索エンジンに評価されやすい構造・コーディング・メタ情報の最適化に対応します。
+            </p>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-fade>
+            <div class="skill-icon pink"><i class="fab fa-figma"></i></div>
+            <h3>UI / Webデザイン</h3>
+            <p>
+              Figmaを使ったデザインカンプ作成から実装まで一貫して対応します。
+            </p>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 80%"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== CONTACT ========== -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-label">Contact</p>
-        <h2 class="sec-title">お問い合わせ</h2>
-        <p class="sec-desc">お見積り・ご相談は無料です。お気軽にご連絡ください。通常2営業日以内にご返信します。</p>
+    <!-- ========== WORKS ========== -->
+    <section id="works" class="section works-section">
+      <div class="container">
+        <div class="sec-head">
+          <p class="sec-label">Works</p>
+          <h2 class="sec-title">制作実績</h2>
+          <p class="sec-desc">これまでに制作したサイトの一部をご紹介します。</p>
+        </div>
+
+        <div class="works-notice" data-fade>
+          <i class="fas fa-circle-info"></i>
+          <p>
+            現在ポートフォリオ準備中のため、以下はサンプル制作物です。実績が増え次第、順次更新いたします。
+          </p>
+        </div>
+
+        <div class="works-grid">
+          <article class="work-card" data-fade>
+            <div class="work-thumb thumb-1">
+              <span class="work-badge">サンプル制作</span>
+              <div class="work-overlay">
+                <a href="#" class="work-link-btn"
+                  >詳細を見る <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags">
+                <span>コーポレートサイト</span>
+                <span>WordPress</span>
+                <span>HTML/CSS</span>
+              </div>
+              <h3>〇〇株式会社 コーポレートサイト</h3>
+              <p>
+                清潔感のあるデザインで信頼性を高めた企業サイト。採用ページとブログ機能も実装。
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card" data-fade>
+            <div class="work-thumb thumb-2">
+              <span class="work-badge">サンプル制作</span>
+              <div class="work-overlay">
+                <a href="#" class="work-link-btn"
+                  >詳細を見る <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags">
+                <span>ランディングページ</span>
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <h3>美容サロン ランディングページ</h3>
+              <p>
+                コンバージョン重視のLP。スクロールアニメーションと予約フォームを実装。
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card" data-fade>
+            <div class="work-thumb thumb-3">
+              <span class="work-badge">個人制作</span>
+              <div class="work-overlay">
+                <a href="#" class="work-link-btn"
+                  >詳細を見る <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags">
+                <span>ポートフォリオ</span>
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <h3>クリエイター ポートフォリオサイト</h3>
+              <p>
+                イラストレーターの作品を魅力的に見せるギャラリーサイト。フィルター機能付き。
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
-      <form class="contact-form" id="contactForm" data-fade>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">お名前 <span class="req">必須</span></label>
-            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
-          </div>
-          <div class="form-group">
-            <label for="company">会社名・屋号</label>
-            <input type="text" id="company" name="company" placeholder="〇〇株式会社">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">メールアドレス <span class="req">必須</span></label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="budget">ご予算目安</label>
-            <select id="budget" name="budget">
-              <option value="">選択してください</option>
-              <option value="~50k">〜5万円</option>
-              <option value="50k-100k">5〜10万円</option>
-              <option value="100k-200k">10〜20万円</option>
-              <option value="200k-300k">20〜30万円</option>
-              <option value="300k+">30万円以上</option>
-              <option value="undecided">未定・要相談</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="message">お問い合わせ内容 <span class="req">必須</span></label>
-          <textarea id="message" name="message" rows="6" placeholder="ご依頼内容・ご要望などをご記入ください。" required></textarea>
-        </div>
-        <div class="form-submit">
-          <button type="submit" class="btn btn-primary btn-lg">
-            <i class="fas fa-paper-plane"></i> 送信する
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <span class="footer-logo">Portfolio</span>
-        <nav class="footer-nav">
-          <a href="#skills">Skills</a>
-          <a href="#works">Works</a>
-          <a href="#service">Service</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    <!-- ========== SERVICE & PRICE ========== -->
+    <section id="service" class="section">
+      <div class="container">
+        <div class="sec-head">
+          <p class="sec-label">Service &amp; Price</p>
+          <h2 class="sec-title">サービスと料金</h2>
+          <p class="sec-desc">
+            ご要望・予算に合わせた柔軟なプランをご提案します。料金はあくまで目安です。お気軽にご相談ください。
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <!-- Light -->
+          <div class="price-card" data-fade>
+            <div class="price-head">
+              <p class="plan-name">ライト</p>
+              <div class="price-num">
+                <span class="yen">¥</span><span class="amount">50,000</span
+                ><span class="from">〜</span>
+              </div>
+              <p class="plan-type">ランディングページ</p>
+            </div>
+            <ul class="price-list">
+              <li class="ok"><i class="fas fa-check"></i> 1ページ構成のLP</li>
+              <li class="ok"><i class="fas fa-check"></i> レスポンシブ対応</li>
+              <li class="ok">
+                <i class="fas fa-check"></i> お問い合わせフォーム
+              </li>
+              <li class="ok"><i class="fas fa-check"></i> 基本SEO設定</li>
+              <li class="ok">
+                <i class="fas fa-check"></i> 納品後1ヶ月サポート
+              </li>
+              <li class="no"><i class="fas fa-xmark"></i> CMS導入</li>
+              <li class="no"><i class="fas fa-xmark"></i> 複数ページ対応</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline w-full">相談する</a>
+          </div>
+
+          <!-- Standard (featured) -->
+          <div class="price-card featured" data-fade>
+            <div class="popular-badge">人気</div>
+            <div class="price-head">
+              <p class="plan-name">スタンダード</p>
+              <div class="price-num">
+                <span class="yen">¥</span><span class="amount">150,000</span
+                ><span class="from">〜</span>
+              </div>
+              <p class="plan-type">コーポレートサイト</p>
+            </div>
+            <ul class="price-list">
+              <li class="ok"><i class="fas fa-check"></i> 5〜8ページ構成</li>
+              <li class="ok"><i class="fas fa-check"></i> レスポンシブ対応</li>
+              <li class="ok">
+                <i class="fas fa-check"></i> お問い合わせフォーム
+              </li>
+              <li class="ok">
+                <i class="fas fa-check"></i> SEO・Googleアナリティクス
+              </li>
+              <li class="ok"><i class="fas fa-check"></i> WordPress導入</li>
+              <li class="ok">
+                <i class="fas fa-check"></i> ブログ・お知らせ機能
+              </li>
+              <li class="ok">
+                <i class="fas fa-check"></i> 納品後3ヶ月サポート
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary w-full">相談する</a>
+          </div>
+
+          <!-- Premium -->
+          <div class="price-card" data-fade>
+            <div class="price-head">
+              <p class="plan-name">プレミアム</p>
+              <div class="price-num">
+                <span class="yen">¥</span><span class="amount">300,000</span
+                ><span class="from">〜</span>
+              </div>
+              <p class="plan-type">大規模サイト・EC</p>
+            </div>
+            <ul class="price-list">
+              <li class="ok"><i class="fas fa-check"></i> ページ数無制限</li>
+              <li class="ok"><i class="fas fa-check"></i> レスポンシブ対応</li>
+              <li class="ok"><i class="fas fa-check"></i> EC・予約システム</li>
+              <li class="ok">
+                <i class="fas fa-check"></i> 高度SEO・アクセス解析
+              </li>
+              <li class="ok">
+                <i class="fas fa-check"></i> CMS導入・管理者研修
+              </li>
+              <li class="ok">
+                <i class="fas fa-check"></i> 多言語対応（オプション）
+              </li>
+              <li class="ok">
+                <i class="fas fa-check"></i> 納品後6ヶ月サポート
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-outline w-full">相談する</a>
+          </div>
+        </div>
+
+        <!-- Flow -->
+        <div class="flow-block" data-fade>
+          <h3 class="flow-title"><i class="fas fa-route"></i> 制作の流れ</h3>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="step-num">01</div>
+              <h4>ヒアリング</h4>
+              <p>ご要望・目的・予算をオンラインでお伺いします。</p>
+            </div>
+            <i class="fas fa-chevron-right flow-arrow"></i>
+            <div class="flow-step">
+              <div class="step-num">02</div>
+              <h4>お見積り</h4>
+              <p>内容をもとにお見積りをご提示し、ご了承後に契約です。</p>
+            </div>
+            <i class="fas fa-chevron-right flow-arrow"></i>
+            <div class="flow-step">
+              <div class="step-num">03</div>
+              <h4>デザイン・制作</h4>
+              <p>デザイン案をご確認いただきながら丁寧に制作します。</p>
+            </div>
+            <i class="fas fa-chevron-right flow-arrow"></i>
+            <div class="flow-step">
+              <div class="step-num">04</div>
+              <h4>公開・サポート</h4>
+              <p>最終確認後に公開。アフターサポートも充実しています。</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="footer-copy">&copy; 2026 Your Name. All rights reserved.</p>
-    </div>
-  </footer>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="sec-head">
+          <p class="sec-label">About</p>
+          <h2 class="sec-title">自己紹介</h2>
+        </div>
+        <div class="about-wrap">
+          <div class="about-img-col" data-fade>
+            <div class="avatar-box">
+              <div class="avatar-ring"></div>
+              <div class="avatar-circle">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="avatar-deco deco-1"></div>
+              <div class="avatar-deco deco-2"></div>
+            </div>
+          </div>
+          <div class="about-text-col" data-fade>
+            <h3 class="about-name">
+              Your Name<span class="about-name-ja"> ／ ユア・ネーム</span>
+            </h3>
+            <p class="about-role">Web Creator / フリーランス</p>
+            <p class="about-bio">
+              はじめまして。フリーランスのWebクリエイター、[お名前]です。<br /><br />
+              「ホームページを持ちたいけど何から始めればいいか分からない」——そんな方のお悩みを解決したい思いからWeb制作を始めました。<br /><br />
+              デザインから実装・公開まで一人で対応するため、スピーディで密なコミュニケーションが強みです。お客様のビジネスを育てるパートナーとして、丁寧にサポートします。
+            </p>
+            <ul class="about-info">
+              <li>
+                <i class="fas fa-location-dot"></i> 東京都 ／ リモート対応可
+              </li>
+              <li><i class="fas fa-envelope"></i> your@email.com</li>
+              <li>
+                <i class="fas fa-clock"></i> 平日 9:00〜18:00（土日応相談）
+              </li>
+            </ul>
+            <div class="about-sns">
+              <a href="#" aria-label="Twitter / X"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="sec-head">
+          <p class="sec-label">Contact</p>
+          <h2 class="sec-title">お問い合わせ</h2>
+          <p class="sec-desc">
+            お見積り・ご相談は無料です。お気軽にご連絡ください。通常2営業日以内にご返信します。
+          </p>
+        </div>
+        <form class="contact-form" id="contactForm" data-fade>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前 <span class="req">必須</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="山田 太郎"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="company">会社名・屋号</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="〇〇株式会社"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email"
+                >メールアドレス <span class="req">必須</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="budget">ご予算目安</label>
+              <select id="budget" name="budget">
+                <option value="">選択してください</option>
+                <option value="~50k">〜5万円</option>
+                <option value="50k-100k">5〜10万円</option>
+                <option value="100k-200k">10〜20万円</option>
+                <option value="200k-300k">20〜30万円</option>
+                <option value="300k+">30万円以上</option>
+                <option value="undecided">未定・要相談</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message"
+              >お問い合わせ内容 <span class="req">必須</span></label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="ご依頼内容・ご要望などをご記入ください。"
+              required
+            ></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fas fa-paper-plane"></i> 送信する
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <span class="footer-logo">Portfolio</span>
+          <nav class="footer-nav">
+            <a href="#skills">Skills</a>
+            <a href="#works">Works</a>
+            <a href="#service">Service</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <p class="footer-copy">&copy; 2026 Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
