@@ -1,9 +1,13 @@
-name: Deploy to EC2
+name: Deploy to S3 + CloudFront
 
 on:
   push:
     branches:
-      - main # mainブランチにプッシュされた時に実行されます
+      - main
+
+permissions:
+  id-token: write # OIDC認証に必須
+  contents: read
 
 jobs:
   deploy:
@@ -13,11 +17,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to EC2 via SSH/rsync
-        uses: appleboy/scp-action@v0.1.7
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          host: ${{ secrets.EC2_HOST }} # 「.」に修正しました
-          username: ${{ secrets.EC2_USER }} # 「.」に修正しました
-          key: ${{ secrets.EC2_SSH_KEY }} # 「.」に修正しました
-          source: "."
-          target: "/var/www/html"
+          role-to-assume: arn:aws:iam::274197532052:role/Web-portofolio
+          aws-region: ap-northeast-1
+
+      - name: Sync to S3
+        run: |
+          aws s3 sync . s3://my-site-bucket-20260630/ --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "server/*" \
+            --exclude "README.md"
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E21SF5AR87L6SP \
+            --paths "/*"
